@@ -7,6 +7,12 @@ avere problemi appena vaso sotto i 1300px
 - la heading-primary va a capo con un fastiioso effetto scatto e la gallery 
 della section testimonials anche*/
 
+/***************************************
+  *                                    *
+  * Sotto i 1344 px (Smaller desktops) *
+  *                                    *
+  **************************************
+  */
 @media (max-width: 84em) {
   .hero {
     max-width: 120rem;
@@ -20,6 +26,48 @@ della section testimonials anche*/
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/****************************************
+  *                                     *
+  * Sotto i 1200 px (Landscape tablets) *
+  *           em =  1200 /16px          *
+  *************************************** 
+  */
+@media (max-width: 75em) {
+  html {
+    /* * 9px / 16px = 0,5625px* */
+    font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .testimonial-container {
+    padding: 9.6rem 3.2rem;
+  }
+}
+
 /* 
 - Font Size SystemM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
