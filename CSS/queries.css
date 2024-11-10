@@ -92,9 +92,42 @@ della section testimonials anche*/
     background-color: rgba(255, 255, 255, 0.97);
     width: 100%;
     height: 100vh;
+    transform: translateX(100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* hide navigation */
+    /* display:none non permette le transizioni */
+    /* display: none; */
+    /* quindi utilizziamo opacity: ; */
+    /* ma opacity non toglie l'elemento dalla pagina */
+    /* quindi è necessario effettuare altri step */
+
+    /* 1) nascondere la visualizzaione */
+    opacity: 0;
+
+    /* 2) renderlo non accessibili al mouse o alla tastiera */
+    pointer-events: none;
+
+    /* 3) Nasconderli dagli screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
   }
 
   .main-nav-link:link,
