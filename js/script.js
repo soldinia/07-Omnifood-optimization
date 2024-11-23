@@ -1,6 +1,12 @@
 console.log("Eccoci");
+
+const yearEl = document.querySelector(".year");
+let dataOggi = new Date().getFullYear();
+
+yearEl.textContent = dataOggi;
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
+
 function checkFlexGap() {
   var flex = document.createElement("div");
   flex.style.display = "flex";
